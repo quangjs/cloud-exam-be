@@ -1,0 +1,59 @@
+[
+    {
+      "name": "Compute (EC2)",
+      "description": "Amazon EC2 concepts including instance types, pricing models, AMIs, placement groups, Auto Scaling, and Elastic Load Balancing."
+    },
+    {
+      "name": "Object Storage (S3)",
+      "description": "Amazon S3 storage classes, lifecycle policies, versioning, encryption, durability, and performance optimization."
+    },
+    {
+      "name": "Block & File Storage (EBS & EFS)",
+      "description": "Amazon EBS volume types, snapshots, performance characteristics, and Amazon EFS use cases and scalability."
+    },
+    {
+      "name": "Databases",
+      "description": "Database services including RDS, Aurora, DynamoDB, ElastiCache, database selection, scaling, availability, and backup strategies."
+    },
+    {
+      "name": "Networking & Content Delivery",
+      "description": "VPC design, subnets, routing, security groups, NACLs, Elastic Load Balancing, Route 53 DNS, and CloudFront CDN."
+    },
+    {
+      "name": "Security, Identity & Compliance",
+      "description": "IAM users, roles, and policies, authentication and authorization, encryption, key management, and AWS compliance concepts."
+    },
+    {
+      "name": "High Availability & Disaster Recovery",
+      "description": "Multi-AZ architectures, backup and restore, pilot light, warm standby, multi-region designs, and failover strategies."
+    },
+    {
+      "name": "Scalability & Elasticity",
+      "description": "Horizontal and vertical scaling, Auto Scaling strategies, load balancing, decoupled architectures, and elastic design principles."
+    },
+    {
+      "name": "Application Integration & Messaging",
+      "description": "Application integration using SQS, SNS, EventBridge, Step Functions, and event-driven architecture patterns."
+    },
+    {
+      "name": "Serverless",
+      "description": "Serverless architectures using AWS Lambda, API Gateway, event sources, and best practices for scalable serverless design."
+    },
+    {
+      "name": "Monitoring, Logging & Auditing",
+      "description": "Operational visibility using CloudWatch metrics and alarms, CloudTrail auditing, logging strategies, and troubleshooting."
+    },
+    {
+      "name": "Cost Optimization",
+      "description": "AWS pricing models, cost allocation, budgets, Reserved Instances, Savings Plans, and cost-efficient architectural decisions."
+    },
+    {
+      "name": "Migration & Hybrid Architectures",
+      "description": "Cloud migration strategies, AWS Snow Family, DMS, hybrid connectivity, data transfer approaches, and on-prem integration."
+    },
+    {
+      "name": "Well-Architected Framework",
+      "description": "AWS Well-Architected pillars including security, reliability, performance efficiency, cost optimization, and operational excellence."
+    }
+  ]
+  

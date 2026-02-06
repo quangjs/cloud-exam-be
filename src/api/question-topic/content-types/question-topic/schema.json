@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "question_topics",
+  "info": {
+    "singularName": "question-topic",
+    "pluralName": "question-topics",
+    "displayName": "Question Topic"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}

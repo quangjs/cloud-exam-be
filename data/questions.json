@@ -1,0 +1,190 @@
+[
+  {
+    "code": "EC2-001",
+    "question": "A company needs to run a compute-intensive workload that can be interrupted. The workload is flexible on when it runs. Which EC2 purchasing option provides the MOST cost-effective solution?",
+    "type": "single",
+    "answers": [
+      { "id": "A", "content": "On-Demand Instances" },
+      { "id": "B", "content": "Reserved Instances" },
+      { "id": "C", "content": "Spot Instances" },
+      { "id": "D", "content": "Dedicated Hosts" }
+    ],
+    "correctAnswer": ["C"],
+    "explanation": "Spot Instances provide up to 90% discount compared to On-Demand prices. They are ideal for workloads that can tolerate interruptions, such as batch processing, data analysis, and background jobs.",
+    "difficulty": "easy",
+    "source": "AWS SAA Practice",
+    "topic": "Compute (EC2)",
+    "tags": ["EC2"]
+  },
+  {
+    "code": "EC2-002",
+    "question": "A solutions architect is designing an application that requires the lowest possible latency between EC2 instances. The instances run a high-performance computing (HPC) workload that requires inter-instance communication. Which placement group strategy should the architect use?",
+    "type": "single",
+    "answers": [
+      { "id": "A", "content": "Cluster placement group" },
+      { "id": "B", "content": "Spread placement group" },
+      { "id": "C", "content": "Partition placement group" },
+      { "id": "D", "content": "Default placement group" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Cluster placement groups pack instances close together inside an Availability Zone. This strategy enables workloads to achieve the low-latency network performance necessary for tightly-coupled node-to-node communication typical of HPC applications.",
+    "difficulty": "medium",
+    "source": "AWS SAA Practice",
+    "topic": "Compute (EC2)",
+    "tags": ["EC2"]
+  },
+  {
+    "code": "EC2-003",
+    "question": "A company runs a critical application on Amazon EC2 instances. The company needs to ensure that instances are distributed across underlying hardware to minimize correlated failures. Which placement group strategy meets this requirement?",
+    "type": "single",
+    "answers": [
+      { "id": "A", "content": "Cluster placement group" },
+      { "id": "B", "content": "Spread placement group" },
+      { "id": "C", "content": "Partition placement group" },
+      { "id": "D", "content": "Multi-AZ placement group" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Spread placement groups place instances on distinct underlying hardware. This reduces the risk of simultaneous failures that could occur when instances share the same underlying hardware. Spread placement groups are recommended for applications that have a small number of critical instances that should be kept separate from each other.",
+    "difficulty": "medium",
+    "source": "AWS SAA Practice",
+    "topic": "Compute (EC2)",
+    "tags": ["EC2"]
+  },
+  {
+    "code": "EC2-004",
+    "question": "A company has a steady-state workload that will run continuously for 3 years. The company wants to minimize compute costs. Which EC2 purchasing option provides the MOST cost savings?",
+    "type": "single",
+    "answers": [
+      { "id": "A", "content": "On-Demand Instances" },
+      { "id": "B", "content": "Spot Instances" },
+      { "id": "C", "content": "EC2 Instance Savings Plans" },
+      { "id": "D", "content": "Standard Reserved Instances with 3-year term and All Upfront payment" }
+    ],
+    "correctAnswer": ["D"],
+    "explanation": "Standard Reserved Instances with a 3-year term and All Upfront payment provide the maximum discount (up to 72% compared to On-Demand). For steady-state, predictable workloads running continuously for 3 years, this option offers the greatest cost savings. Spot Instances are not suitable as they can be interrupted.",
+    "difficulty": "medium",
+    "source": "AWS SAA Practice",
+    "topic": "Compute (EC2)",
+    "tags": ["EC2", "Reserved Instances"]
+  },
+  {
+    "code": "EC2-005",
+    "question": "A company needs to run a memory-intensive database workload on EC2. The database requires 512 GB of RAM. Which EC2 instance family is MOST appropriate for this use case?",
+    "type": "single",
+    "answers": [
+      { "id": "A", "content": "C-family (Compute Optimized)" },
+      { "id": "B", "content": "R-family (Memory Optimized)" },
+      { "id": "C", "content": "T-family (Burstable)" },
+      { "id": "D", "content": "M-family (General Purpose)" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "R-family instances are memory optimized and designed for memory-intensive applications such as high-performance databases, distributed memory caches, and in-memory analytics. R instances provide a high ratio of memory to CPU, making them ideal for workloads requiring large amounts of RAM.",
+    "difficulty": "easy",
+    "source": "AWS SAA Practice",
+    "topic": "Compute (EC2)",
+    "tags": ["EC2"]
+  },
+  {
+    "code": "EC2-006",
+    "question": "A solutions architect needs to store temporary data that requires the highest possible I/O performance. The data does not need to persist if the instance is stopped or terminated. Which storage option should the architect use?",
+    "type": "single",
+    "answers": [
+      { "id": "A", "content": "Amazon EBS General Purpose SSD (gp3)" },
+      { "id": "B", "content": "Amazon EBS Provisioned IOPS SSD (io2)" },
+      { "id": "C", "content": "EC2 Instance Store" },
+      { "id": "D", "content": "Amazon EFS" }
+    ],
+    "correctAnswer": ["C"],
+    "explanation": "EC2 Instance Store provides temporary block-level storage physically attached to the host computer. It offers the highest I/O performance because it is directly attached to the instance. Instance store is ideal for temporary storage of data that changes frequently, such as buffers, caches, and scratch data. Data on instance store volumes is lost when the instance is stopped, terminated, or fails.",
+    "difficulty": "medium",
+    "source": "AWS SAA Practice",
+    "topic": "Compute (EC2)",
+    "tags": ["EC2", "EBS"]
+  },
+  {
+    "code": "EC2-007",
+    "question": "A company wants to create a reusable template that includes an operating system, application software, and configuration settings to launch multiple EC2 instances consistently. What should the company use?",
+    "type": "single",
+    "answers": [
+      { "id": "A", "content": "Amazon Machine Image (AMI)" },
+      { "id": "B", "content": "EC2 User Data script" },
+      { "id": "C", "content": "AWS CloudFormation template" },
+      { "id": "D", "content": "EC2 Instance metadata" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "An Amazon Machine Image (AMI) provides the information required to launch an instance. An AMI includes the operating system, application server, applications, and associated configuration. You can launch multiple instances from a single AMI to create instances with identical configurations.",
+    "difficulty": "easy",
+    "source": "AWS SAA Practice",
+    "topic": "Compute (EC2)",
+    "tags": ["EC2", "AMI"]
+  },
+  {
+    "code": "EC2-008",
+    "question": "A company has regulatory requirements that mandate dedicated physical servers for their workloads. The company needs visibility into the number of sockets and physical cores on the server for software licensing purposes. Which EC2 purchasing option meets these requirements?",
+    "type": "single",
+    "answers": [
+      { "id": "A", "content": "Dedicated Instances" },
+      { "id": "B", "content": "Dedicated Hosts" },
+      { "id": "C", "content": "Reserved Instances" },
+      { "id": "D", "content": "Spot Instances" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Dedicated Hosts are physical servers with EC2 instance capacity fully dedicated to your use. Dedicated Hosts provide visibility and control over how instances are placed on the physical server, including visibility into the number of sockets and physical cores. This is essential for using existing server-bound software licenses that have per-socket or per-core licensing requirements.",
+    "difficulty": "medium",
+    "source": "AWS SAA Practice",
+    "topic": "Compute (EC2)",
+    "tags": ["EC2"]
+  },
+  {
+    "code": "EC2-009",
+    "question": "A company's application on EC2 needs to retrieve instance metadata, such as the instance ID and Availability Zone, at runtime. How can the application access this information?",
+    "type": "single",
+    "answers": [
+      { "id": "A", "content": "Query the AWS Management Console API" },
+      { "id": "B", "content": "Make an HTTP request to http://169.254.169.254/latest/meta-data/" },
+      { "id": "C", "content": "Read the /etc/aws/instance-metadata file" },
+      { "id": "D", "content": "Use the AWS CLI to run aws ec2 describe-instances" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Instance metadata is data about your instance that you can use to configure or manage the running instance. You can access instance metadata from within a running instance by making an HTTP request to http://169.254.169.254/latest/meta-data/. This is a link-local address that is only accessible from the instance itself.",
+    "difficulty": "easy",
+    "source": "AWS SAA Practice",
+    "topic": "Compute (EC2)",
+    "tags": ["EC2"]
+  },
+  {
+    "code": "EC2-010",
+    "question": "A company wants to automatically scale their EC2 instances based on CPU utilization. When CPU utilization exceeds 70%, new instances should be added. When it falls below 30%, instances should be removed. Which combination of services should be used? (Select TWO)",
+    "type": "multiple",
+    "answers": [
+      { "id": "A", "content": "Amazon CloudWatch alarms" },
+      { "id": "B", "content": "AWS Lambda functions" },
+      { "id": "C", "content": "Amazon EC2 Auto Scaling" },
+      { "id": "D", "content": "AWS Elastic Beanstalk" },
+      { "id": "E", "content": "Amazon EventBridge" }
+    ],
+    "correctAnswer": ["A", "C"],
+    "explanation": "Amazon EC2 Auto Scaling allows you to automatically scale your EC2 capacity based on conditions you define. Amazon CloudWatch alarms monitor metrics like CPU utilization and trigger scaling policies. Together, CloudWatch alarms can be configured to trigger Auto Scaling policies when CPU exceeds 70% (scale out) or falls below 30% (scale in).",
+    "difficulty": "medium",
+    "source": "AWS SAA Practice",
+    "topic": "Compute (EC2)",
+    "tags": ["EC2", "Auto Scaling", "CloudWatch"]
+  },
+  {
+    "code": "EC2-011",
+    "question": "A company needs to launch EC2 instances in a partition placement group for a distributed big data workload like Hadoop and Cassandra. What is a key characteristic of partition placement groups?",
+    "type": "single",
+    "answers": [
+      { "id": "A", "content": "All instances run on the same underlying hardware for lowest latency" },
+      { "id": "B", "content": "Each partition has its own set of racks with independent network and power" },
+      { "id": "C", "content": "Instances are spread across exactly 7 different hardware racks" },
+      { "id": "D", "content": "Instances can only be launched in a single Availability Zone" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Partition placement groups spread instances across logical partitions, ensuring that instances in one partition do not share underlying hardware with instances in other partitions. Each partition has its own set of racks, and each rack has its own network and power source. This strategy is used by large distributed and replicated workloads such as Hadoop, Cassandra, and Kafka.",
+    "difficulty": "hard",
+    "source": "AWS SAA Practice",
+    "topic": "Compute (EC2)",
+    "tags": ["EC2"]
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "question_tags",
+  "info": {
+    "singularName": "question-tag",
+    "pluralName": "question-tags",
+    "displayName": "Question Tag"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::question.question",
+      "mappedBy": "question_tags"
+    }
+  }
+}
