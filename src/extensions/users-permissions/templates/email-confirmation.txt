@@ -1,0 +1,13 @@
+Welcome to Quick Quiz, <%= user.username %>!
+
+Please confirm your email address by clicking the link below:
+
+<%= url %>
+
+If you didn't create an account with Quick Quiz, you can safely ignore this email.
+
+This link will expire in 24 hours.
+
+---
+Quick Quiz Team
+

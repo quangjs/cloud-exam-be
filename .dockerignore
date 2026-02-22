@@ -1,0 +1,10 @@
+.tmp/
+.cache/
+.git/
+.strapi/
+node_modules/
+build/
+dist/
+.env
+.DS_Store
+*.db

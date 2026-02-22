@@ -1,4 +1,35 @@
 export default ({ env }) => ({
+  // Documentation plugin (Swagger/OpenAPI)
+  documentation: {
+    enabled: true,
+    config: {
+      openapi: '3.0.0',
+      info: {
+        version: '1.0.0',
+        title: 'Quick Quiz API',
+        description: 'API documentation for Quick Quiz Backend',
+        contact: {
+          name: 'Quick Quiz Team',
+          email: 'support@quickquiz.com',
+        },
+        license: {
+          name: 'MIT',
+          url: 'https://opensource.org/licenses/MIT',
+        },
+      },
+      'x-strapi-config': {
+        mutateDocumentation: (generatedDocumentationDraft) => {
+          // You can mutate the documentation here
+          return generatedDocumentationDraft;
+        },
+      },
+      servers: [
+        { url: 'http://localhost:1337/api', description: 'Development server' },
+      ],
+      security: [{ bearerAuth: [] }],
+    },
+  },
+
   // Email plugin configuration
   email: {
     config: {
